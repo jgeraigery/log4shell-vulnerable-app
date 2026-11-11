@@ -1,4 +1,4 @@
-FROM gradle:7.3.1-jdk17 AS builder
+FROM gradle:9.8.2-jdk17@sha256:55af4a989cc9188c19668b32e52bbd2a0c801da3b849a6e8f5a25e2134845bf5 AS builder
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 RUN gradle bootJar --no-daemon
